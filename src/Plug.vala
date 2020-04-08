@@ -30,7 +30,7 @@ public string get_cle(string cle) {
         var settings = new GLib.Settings (schema);
         couleur = settings.get_string(cle);
 		} 
-	} else critical("no schema");
+	} else critical(_("no schema"));
 	return (couleur);
 }
 public void set_cle(string cle, string couleur) {
@@ -43,7 +43,7 @@ public void set_cle(string cle, string couleur) {
         var settings = new GLib.Settings (schema);
         settings.set_string(cle,couleur);
 		} 
-	} else critical("no schema");
+	} else critical(_("no schema"));
 }
 
     public class Plug : Switchboard.Plug {
@@ -60,7 +60,7 @@ public void set_cle(string cle, string couleur) {
 
         public override Gtk.Widget get_widget () {
 		//affichage ui dans un frame ici
-        var frm = new Gtk.Frame ("Choose your terminal's colors");
+        var frm = new Gtk.Frame (_("Choose your terminal's colors"));
 		frm.margin = 100;
 		frm.set_label_align(0.5f,1.0f);
         
@@ -72,12 +72,12 @@ public void set_cle(string cle, string couleur) {
 	Gtk.ColorButton[] btncol =new Gtk.ColorButton[17];
 	
 	string[] tab ={"foreground","background"};
-		
+	string[] trad = {_("foreground"), _("background")};
 	//récupérer background
 	var rgba = Gdk.RGBA ();
 		
 	for (int i=0;i<=1; i++)	
-		{ lbl[i] = new Gtk.Label(tab[i]) ;
+		{ lbl[i] = new Gtk.Label(trad[i]) ;
 		  btncol[i] = new Gtk.ColorButton();
 		  rgba.parse (get_cle(tab[i]));
 		  btncol[i].set_rgba(rgba);
@@ -85,7 +85,7 @@ public void set_cle(string cle, string couleur) {
 		  grid.attach(btncol[i],1,i,3,1);
 	    }
 	//palette
-	var lblpalette = new Gtk.Label("palette") ;
+	var lblpalette = new Gtk.Label(_("palette")) ;
 	string couleurs= get_cle("palette");  
 	string[] coul = couleurs.split(":"); 
 	
@@ -103,7 +103,7 @@ public void set_cle(string cle, string couleur) {
 		  
 	    }
 	 
-	var btnappliquer = new Gtk.Button.with_label ("Apply");   
+	var btnappliquer = new Gtk.Button.with_label (_("Apply"));   
 	btnappliquer.clicked.connect( ()=> { 
 		//foreground & background
 		for (int i=0;i<=1;i++) {
@@ -145,7 +145,7 @@ public void set_cle(string cle, string couleur) {
 
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating term plug");
+    debug ("Activating plug");
 
     var plug = new Plug ();
 

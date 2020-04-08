@@ -1,4 +1,4 @@
-project('terminalcolors', 'vala', 'c')
+project('com.github.lafydev.terminalcolors', 'vala', 'c')
 
 switchboard_dep = dependency('switchboard-2.0')
 
@@ -29,4 +29,5 @@ shared_module(
     install: true,
     install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personnel')
 )
+subdir('po')
 meson.add_install_script('meson/post_install.py')
