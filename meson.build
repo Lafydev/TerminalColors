@@ -1,15 +1,15 @@
 project('com.github.lafydev.terminalcolors', 'vala', 'c')
 
-switchboard_dep = dependency('switchboard-2.0')
-
 gettext_name = meson.project_name() + '-plug'
-gnome = import('gnome')
 i18n = import('i18n')
 
-add_project_arguments(
-    '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
+add_global_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
     language:'c'
 )
+subdir('po')
+
+switchboard_dep = dependency('switchboard-2.0')
 
 install_data(
     join_paths('data/icons', 'com.github.lafydev.terminalcolors.png'),
@@ -29,5 +29,5 @@ shared_module(
     install: true,
     install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personnel')
 )
-subdir('po')
+
 meson.add_install_script('meson/post_install.py')
