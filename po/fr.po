@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.lafydev.terminalcolors\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 10:32+0200\n"
+"POT-Creation-Date: 2020-07-09 15:00+0200\n"
 "PO-Revision-Date: 2020-04-08 10:32+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,30 +17,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Plug.vala:33 src/Plug.vala:46
+#: src/Plug.vala:41 src/Plug.vala:54
 msgid "no schema"
 msgstr "pas de schema"
 
-#: src/Plug.vala:55 src/Plug.vala:56
+#: src/Plug.vala:63 src/Plug.vala:64
 msgid "terminal colors"
 msgstr "couleurs du terminal"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:73
 msgid "Choose your terminal's colors"
-msgstr "choisissez vos couleurs pour le terminal"
+msgstr "Choisissez vos couleurs pour le terminal"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:85
 msgid "foreground"
 msgstr "texte"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:85
 msgid "background"
 msgstr "fond"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:98
 msgid "palette"
 msgstr ""
 
-#: src/Plug.vala:106
+#: src/Plug.vala:103
+msgid "Black"
+msgstr "Noir"
+
+#: src/Plug.vala:103
+msgid "Red"
+msgstr "Rouge"
+
+#: src/Plug.vala:103
+msgid "Green"
+msgstr "Vert"
+
+#: src/Plug.vala:103
+msgid "Orange"
+msgstr ""
+
+#: src/Plug.vala:103
+msgid "Blue"
+msgstr "Bleu"
+
+#: src/Plug.vala:103
+msgid "Purple"
+msgstr "Violet"
+
+#: src/Plug.vala:103
+msgid "Light Blue"
+msgstr "Cyan"
+
+#: src/Plug.vala:103
+msgid "Gray"
+msgstr "Gris"
+
+#: src/Plug.vala:119
+msgid "Theme"
+msgstr ""
+
+#: src/Plug.vala:122
+msgid "eos white"
+msgstr ""
+
+#: src/Plug.vala:122
+msgid "eos solarised"
+msgstr ""
+
+#: src/Plug.vala:122
+msgid "eos black"
+msgstr ""
+
+#: src/Plug.vala:158
 msgid "Apply"
 msgstr "Appliquer"

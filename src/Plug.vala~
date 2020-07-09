@@ -101,10 +101,12 @@ public void set_cle(string cle, string couleur) {
 	string[] trad = {_("foreground"), _("background")};
 			
 	//background & foreground 
-	var lbl_fg = new Gtk.Label(trad[0]) ;
+	Gtk.Label lbl-fg=new Gtk.Label;
+	lbl_fg = new Gtk.Label(trad[0]) ;
 	grid.attach(lbl_fg,0,1);
 
-	var lbl_bg = new Gtk.Label(trad[1]) ;
+	Gtk.Label lbl-fg=new Gtk.Label;
+	lbl_bg = new Gtk.Label(trad[1]) ;
 	grid.attach(lbl_bg,0,2);
 
 	var rgba = Gdk.RGBA ();
