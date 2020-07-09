@@ -6,6 +6,8 @@
 A Plug for Switchboard in elementary that helps you to 
 change your colors in elementary's terminal : <br/>
 
+(Fr)Se place dans vos paramètres pour modifier les couleurs du terminal.<br/>
+
 <h1>Build and install (developper)</h1>
 
 Download the last release (zip) et extract files<br/>
